@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+{{>head}}
+
+<body>
+    <!--Preloader starts-->
+    <div class="preloader js-preloader">
+        <img src="/images/preloader.gif" alt="...">
+    </div>
+    <!--Preloader ends-->
+    <!--Page Wrapper starts-->
+    <div class="page-wrapper">
+        {{>listingheader}}
+        <!--Listing section starts-->
+        <div class="filter-wrapper style1 mar-top-100 half-map">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="explore__map-side v2">
+                        <div id="map_right_listing"></div>
+                    </div>
+                    <div class="col-lg-7 offset-lg-5 col-md-12">
+                        <div class="form-group filter-group">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <input type="text" class="form-control filter-input" id="search-filter"
+                                        name="search-bar" placeholder="I'm looking for . . .">
+                                </div>
+                                <div class="col-md-6  col-12">
+                                    <input type="text" class="form-control filter-input" id="location-filter"
+                                        name="search-bar" placeholder="Location">
+                                </div>
+                                <div class="col-md-12  col-12">
+                                    <select class="filter-input" id="option-select" style="display: none;">
+                                        <option>Select Categories</option>
+                                        <option>Art's</option>
+                                        <option>Health</option>
+                                        <option>Hotels</option>
+                                        <option>Real Estate</option>
+                                        <option>Rentals</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="filter-sub-area style1">
+                                        <div class="filter-title  mar-top-20 mar-bot-15">
+                                            <p>Choose distance : <span><input type="text" id="amount"></span></p>
+                                        </div>
+                                        <div id="slider-range" class="price-range mar-bot-40"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6  col-12">
+                                    <div class="filter-sub-menu style1">
+                                        <ul>
+                                            <li class="has-sub"><a href="# ">More Filters</a>
+                                                <ul class="explore__form-checkbox-list half-filter">
+                                                    <div class="filter-checkbox">
+                                                        <p>Sort By Features</p>
+                                                        <li><input id="check-a" type="checkbox" name="check">
+                                                            <label for="check-a">Open Now</label></li>
+                                                        <li> <input id="check-b" type="checkbox" name="check">
+                                                            <label for="check-b">Near me</label></li>
+                                                        <li><input id="check-c" type="checkbox" name="check">
+                                                            <label for="check-c">Child Friendly</label></li>
+                                                        <li><input id="check-d" type="checkbox" name="check">
+                                                            <label for="check-d">Free Parking</label></li>
+                                                        <li><input id="check-f" type="checkbox" name="check">
+                                                            <label for="check-f">Events</label></li>
+                                                        <li><input id="check-e" type="checkbox" name="check">
+                                                            <label for="check-e">Free Wifi</label></li>
+                                                    </div>
+                                                    <div class="filter-checkbox">
+                                                        <p>Sort By Ratings</p>
+                                                        <div>
+                                                            <input id="check-w" type="checkbox" name="check">
+                                                            <label for="check-w">
+                                                            </label>
+                                                            <div class="list-ratings">
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <input id="check-x" type="checkbox" name="check">
+                                                            <label for="check-x">
+                                                            </label>
+                                                            <div class="list-ratings">
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star-outline"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <input id="check-y" type="checkbox" name="check">
+                                                            <label for="check-y">
+                                                            </label>
+                                                            <div class="list-ratings">
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star-outline"></span>
+                                                                <span class="ion-android-star-outline"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <input id="check-z" type="checkbox" name="check">
+                                                            <label for="check-z">
+                                                            </label>
+                                                            <div class="list-ratings">
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star"></span>
+                                                                <span class="ion-android-star-outline"></span>
+                                                                <span class="ion-android-star-outline"></span>
+                                                                <span class="ion-android-star-outline"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-checkbox">
+                                                        <p>Sort By tags</p>
+                                                        <input id="check-ab" type="checkbox" name="check">
+                                                        <label for="check-ab">Hotel</label>
+                                                        <input id="check-bc" type="checkbox" name="check">
+                                                        <label for="check-bc">Restaurant</label>
+                                                        <input id="check-cd" type="checkbox" name="check">
+                                                        <label for="check-cd">sports</label>
+                                                        <input id="check-df" type="checkbox" name="check">
+                                                        <label for="check-df">travel </label>
+                                                    </div>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6  col-12 text-right sm-left">
+                                    <button type="submit" class="btn v1 mar-top-10">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mar-top-25 pad-bot-30 align-items-center">
+                            <div class="col-lg-4 col-sm-4 col-12">
+                                <div class="item-view-mode res-box">
+                                    <!-- item-filter-list start -->
+                                    <ul class="nav item-filter-list" role="tablist">
+                                        <li><a data-toggle="tab" href="#grid-view"><i class="ion-grid"></i></a></li>
+                                        <li class="active"><a class="active" data-toggle="tab" href="#list-view"><i
+                                                    class="ion-ios-list"></i></a></li>
+                                    </ul>
+                                    <!-- item-filter-list end -->
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-sm-8 col-12">
+                                <div class="item-element res-box  text-right xs-left">
+                                    <p>Showing <span>1-15 of 69</span> Listings</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-wrapper">
+                            <div class="tab-content">
+                                <div id="grid-view" class="tab-pane  product-grid">
+
+                                </div>
+                                <div id="list-view" class="tab-pane active  product-list">
+                                    {{#data}}{{>list}}{{/data}}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--Listing section ends-->
+        <!-- Scroll to top starts-->
+        <span class="scrolltotop"><i class="ion-arrow-up-c"></i></span>
+        <!-- Scroll to top ends-->
+    </div>
+    <!--Page Wrapper ends-->
+    {{>listingscript}}
+</body>
+
+</html>
