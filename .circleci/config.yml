@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      -- image: circleci/node:10.16.3
+      - image: circleci/node:10.16.3
       - image: circleci/mysql:8.0.4
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
@@ -19,22 +19,11 @@ jobs:
         - checkout
         -run: npm install
         -run: node mysql_testing.js
-      # - run:
-      #     # Our primary container isn't MYSQL so run a sleep command until it's ready.
-      #     name: Waiting for MySQL to be ready
-      #     command: |
-      #       for i in `seq 1 10`;
-      #       do
-      #         nc -z 127.0.0.1 8889 && echo Success && exit 0
-      #         echo -n .
-      #         sleep 1
-      #       done
-      #       echo Failed waiting for MySQL && exit 1
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build
+# workflows:
+#   version: 2
+#   build-deploy:
+#     jobs:
+#       - build
 # version: 2.1
 # jobs:
 #   build:
