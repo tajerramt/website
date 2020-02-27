@@ -3,22 +3,22 @@ const request = require('supertest');
 const app = require('./app');
 const index = require('./routes/index');
 const connection = require('./routes/mysql');
-describe('Test the about us path', () => {
-    test('It should response the GET method', async () => {
-        const response = await request(app).get('/');
-        expect(response.statusCode).toBe(200);
+// describe('Test the about us path', () => {
+//     test('It should response the GET method', async () => {
+//         const response = await request(app).get('/');
+//         expect(response.statusCode).toBe(200);
 
-    });
+//     });
 
-});
-describe('Test the about us path', () => {
-    test('It should response the GET method', async () => {
-        const response = await request(app).get('/listing');
-        expect(response.statusCode).toBe(200);
+// });
+// describe('Test the about us path', () => {
+//     test('It should response the GET method', async () => {
+//         const response = await request(app).get('/listing');
+//         expect(response.statusCode).toBe(200);
 
-    });
+//     });
 
-});
+// });
 describe('Test the about us path', () => {
     test('It should response the GET method', async () => {
         const response = await request(app).get('/about');
@@ -35,14 +35,14 @@ describe('Test the about us path', () => {
     });
 
 });
-describe('Test the about us path', () => {
-    test('It should response the GET method', async () => {
-        const response = await request(app).get('/property/1703-Deerfield');
-        expect(response.statusCode).toBe(200);
+// describe('Test the about us path', () => {
+//     test('It should response the GET method', async () => {
+//         const response = await request(app).get('/property/1703-Deerfield');
+//         expect(response.statusCode).toBe(200);
 
-    });
+//     });
 
-});
+// });
 // const connection = require('./routes/mysql');
 // const index =
 // describe('Test the connection path', () => {
