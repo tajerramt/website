@@ -8,13 +8,14 @@ let connection = mysql.createConnection({
     port: "8889",
 
 });
-// connection.connect(function (err) {
-//     if (err) {
-//         throw err;
-//     } else {
-//         console.log("Connected!");
-//     }
-// });
+connection.connect(function (err) {
+    if (err) {
+        throw err;
+    } else {
+        console.log("Connected!");
+    }
+});
+connection.end();
 // connection.get(function (err) {
 //     if (err) {
 //         throw err;
