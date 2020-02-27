@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "test": "jest --forceExit",
     "build": "webpack --mode=development app.js",
     "one": "webpack --config webpack.config.js",
     "twp": "webpack --config webpack.dev.js"
@@ -15,6 +16,7 @@
     "express-handlebars": "^3.1.0",
     "http-errors": "~1.6.3",
     "lodash": "^4.17.15",
+    "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
     "mysql": "^2.18.1",
     "net": "^1.0.2",
@@ -27,6 +29,7 @@
     "handlebars-webpack-plugin": "^1.8.0",
     "html-webpack-plugin": "^4.0.0-beta.11",
     "path": "^0.12.7",
+    "supertest": "^4.0.2",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   }

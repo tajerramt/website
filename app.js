@@ -28,7 +28,6 @@ app.use(express.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', indexRouter);
 app.use('/listing', listingRouter);
 app.use('/property', propertyRouter);
@@ -55,8 +54,4 @@ module.exports = app;
 
 
 /*
-git: 
-
-
-
-*/
+ */
