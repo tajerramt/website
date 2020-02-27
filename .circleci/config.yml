@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - checkout
-      # - run: apt install netcat
+      - run: sudo apt-get install nc
       - run:
           # Our primary container isn't MYSQL so run a sleep command until it's ready.
           name: Waiting for MySQL to be ready
