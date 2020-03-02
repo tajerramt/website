@@ -34,8 +34,8 @@ var mediaw = ['images_deerfield', 'images_deerfield_2', 'images_tw_101', 'images
 var reviewsw = ['reviews_deerfield', 'reviews_deerfield_2', 'reviews_tw_101', 'reviews_tw_202', 'reviews_wd_a', 'reviews_wd_b'];
 
 // var test = new property();
-var adminLogin = mongoose.model('properties', property);
-adminLogin.find(function (err, adminLogins) {
+var adminLogin = mongoose.model('properties');
+adminLogin.find({}, function (err, adminLogins) {
     if (err) return console.error(err);
     console.log(adminLogins);
 });
