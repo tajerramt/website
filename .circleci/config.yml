@@ -3,9 +3,11 @@ jobs:
   build:
     docker:
       - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
-    steps:
+      - image: circleci/mongo:4.2.3
+      steps:
       - checkout # check out the code in the project directory
       - run: npm install
+      - run: npm run test
 # jobs:
 #   build:
 #     executor:
