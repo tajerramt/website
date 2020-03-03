@@ -1,29 +1,20 @@
 var connection = require('./mysql');
 var express = require('express');
+var mongoose = require('mongoose');
 var router = express.Router();
-var query = `SELECT *
-FROM property`;
+var db = require('./mongoose');
 /* GET lsiting page. */
-
-router.get('/', function (req, res, next) {
-    connection.getConnection((err, tempconnection) => {
+router.get('/', async (req, res, next) => {
+    await db.model('properties').find((err, data) => {
         if (err) {
-            tempconnection.release();
             throw err;
         } else {
-            console.log("connect");
-            tempconnection.query(query, (err, data) => {
-                if (!err) {
-                    res.render('listing', {
-                        data: data,
-                        layout: 'listing'
-                    });
-                } else {
-                    throw err;
-                }
+            res.render('listing', {
+                data: data,
+                layout: 'listing'
             });
-            tempconnection.release();
         }
     });
 });
+
 module.exports = router;
