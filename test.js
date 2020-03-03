@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var property = require('../website/routes/tst/properties');
+var property = require('./routes/tst/properties');
 var assert = require('assert');
 mongoose.Promise = global.Promise;
 
