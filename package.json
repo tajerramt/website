@@ -24,6 +24,7 @@
     "tls": "0.0.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "css-loader": "^3.4.2",
     "handlebars": "^4.7.3",
     "handlebars-loader": "^1.7.1",
