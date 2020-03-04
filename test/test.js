@@ -2,7 +2,7 @@ var request = require('supertest');
 var page = require('../app');
 var assert = require('assert');
 var mongoose = require('../routes/mongoose');
-describe('loading express', function () {
+describe('loading express server ', function () {
     var server;
     before(function (done) {
         server = require('../bin/www');
@@ -14,36 +14,32 @@ describe('loading express', function () {
             if (err) {
                 throw err;
             } else {
-                console.log('closed');
+                console.log('Connection closed!!');
                 mongoose.close(done);
 
                 // server.close();
                 // done();
             }
         });
-
-        // after(function (done) {
-        //     server.close(function () {
-        //       mongoose.connection.close(done)
-        //     })
-        // })
-        // done();
-        //     // server.close();
-        //     // (done);
-        //     // process.exit(1);
-        //     // mongoose.connection.close(done)
-        //     // done();
-        //     // assert();
-        //     // server.close();
     });
-    it('responds to /', function (done) {
+    it('responds to home page', function (done) {
         request(page)
             .get('/')
             .expect(200, done);
     });
-    it('responds to /about', function (done) {
+    it('responds to about page', function (done) {
         request(page)
             .get('/about')
+            .expect(200, done);
+    });
+    it('responds to listing page', function (done) {
+        request(page)
+            .get('/listing')
+            .expect(200, done);
+    });
+    it('responds to contact page ', function (done) {
+        request(page)
+            .get('/contact')
             .expect(200, done);
     });
 });

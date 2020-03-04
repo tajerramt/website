@@ -1,4 +1,4 @@
-var connection = require('./mysql');
+// var connection = require('./mysql');
 var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
