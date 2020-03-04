@@ -21,7 +21,7 @@ describe('loading express server ', function () {
     it('responds to home page', function (done) {
         request(page)
             .get('/')
-            .expect(400).expect(/Deerfield/, done);
+            .expect(200).expect(/Deerfield/, done);
     });
     it('responds to about page', function (done) {
         request(page)
