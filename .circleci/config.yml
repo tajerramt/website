@@ -12,6 +12,7 @@ jobs:
       #   name: Restore node modules cache
       #   key: node_modules-{{ checksum "package-lock.json" }}
       - run: npm run test
+      # maybe at test
 # jobs:
 #   build:
 #     executor:
