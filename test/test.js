@@ -7,7 +7,6 @@ describe('loading express server ', function () {
     before(function (done) {
         server = require('../bin/www');
         done();
-        // var arw = require('../routes/mongoose');
     });
     after(function (done) {
         server.close((err) => {
@@ -16,16 +15,13 @@ describe('loading express server ', function () {
             } else {
                 console.log('Connection closed!!');
                 mongoose.close(done);
-
-                // server.close();
-                // done();
             }
         });
     });
     it('responds to home page', function (done) {
         request(page)
             .get('/')
-            .expect(200, done).expect(/Deerfield/);
+            .expect(200).expect(/Deerfield/, done);
     });
     it('responds to about page', function (done) {
         request(page)
@@ -35,8 +31,8 @@ describe('loading express server ', function () {
     it('responds to listing page', function (done) {
         request(page)
             .get('/listing')
-            .expect(200, done)
-            .expect(/Deerfield/);
+            .expect(200)
+            .expect(/Deerfield/, done);
     });
     it('responds to contact page ', function (done) {
         request(page)
