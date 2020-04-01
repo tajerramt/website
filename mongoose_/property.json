@@ -1,0 +1,26 @@
+{
+  "Title": "Woodland-A",
+  "Unit": "Woodland - Unit A",
+  "Slug": "Woodland-A",
+  "Address": "1910 Woodland Ave, Austin, TX",
+  "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta consectetur et porro voluptatem maiores quidem inventore harum explicabo deserunt fuga minima sed, sit nemo expedita. Dolor aliquid rerum recusandae excepturi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta consectetur et porro voluptatem maiores quidem inventore harum explicabo deserunt fuga minima sed, sit nemo expedita. Dolor aliquid rerum recusandae excepturi.",
+  "NumRoom": 2,
+  "NumBath": 2,
+  "PetFriendly": true,
+  "Ameneties": ["one", "two", "three", "foor"],
+  "Room": [
+    {
+      "Title": "Master-A",
+      "Description": "Blabla",
+      "Slug": "Master-A-Woodland",
+      "MinDuration": 30,
+      "NumBeds": 1,
+      "Ameneties": ["one", "two", "three", "foor"],
+      "Review": [{ "Name": "El", "Description": "Amazing !", "Stars": "5" }]
+    }
+  ],
+  "Media": {
+    "Name": 30,
+    "Location": ["/Image1", "/Image2", "/Image3", "/Image4"]
+  }
+}
